@@ -24,6 +24,10 @@ public class OpenApiConfiguration {
             url("http://localhost:8080").
             description("Server URL in Development environment");
 
+    Server prodServer = new Server().
+            url("https://deploy-spring-3.onrender.com").
+            description("Server URL in Production environment");
+
     Info info = new Info()
             .title("ToDo List")
             .version("1.0")
@@ -42,6 +46,6 @@ public class OpenApiConfiguration {
                                 .type(SecurityScheme.Type.HTTP)
                                 .scheme("bearer")
                                 .bearerFormat("JWT")
-                        )).info(info).servers(List.of(devServer));
+                        )).info(info).servers(List.of(devServer,prodServer));
     }
 }
