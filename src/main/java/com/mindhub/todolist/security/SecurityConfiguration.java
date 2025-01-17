@@ -49,7 +49,7 @@ public class SecurityConfiguration {
                         //Task Controllers
                         .requestMatchers(HttpMethod.POST,"/api/task/create").hasAnyAuthority("USER", "ADMIN")
                         .requestMatchers(HttpMethod.GET,"/api/task/getAll").hasAnyAuthority("USER", "ADMIN")
-                        .requestMatchers(HttpMethod.GET,"/api/client/countUserTasks/{id}").hasAnyAuthority("USER", "ADMIN")
+                        .requestMatchers(HttpMethod.GET,"/api/task/countUserTasks/{id}").hasAnyAuthority("USER", "ADMIN")
                         .requestMatchers(HttpMethod.PATCH,"/api/task/update").hasAnyAuthority("USER", "ADMIN")
                         .requestMatchers(HttpMethod.DELETE,"/api/task/delete/{id}").hasAnyAuthority("USER", "ADMIN")
                         //User Controllers
