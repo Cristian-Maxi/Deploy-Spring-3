@@ -46,6 +46,6 @@ public class OpenApiConfiguration {
                                 .type(SecurityScheme.Type.HTTP)
                                 .scheme("bearer")
                                 .bearerFormat("JWT")
-                        )).info(info).servers(List.of(devServer,prodServer));
+                        )).info(info).servers(List.of(prodServer, devServer));
     }
 }
